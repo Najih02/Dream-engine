@@ -1,0 +1,96 @@
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(110%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes underlineSlide {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes scrollPulse {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  45% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+
+  46% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(48px);
+  transition: opacity 0.75s ease, transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.services-grid > [data-animate]:nth-child(1),
+.portfolio-carousel > [data-animate]:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.services-grid > [data-animate]:nth-child(2),
+.portfolio-carousel > [data-animate]:nth-child(2) {
+  transition-delay: 120ms;
+}
+
+.services-grid > [data-animate]:nth-child(3),
+.portfolio-carousel > [data-animate]:nth-child(3) {
+  transition-delay: 240ms;
+}
+
+.services-grid > [data-animate]:nth-child(4),
+.portfolio-carousel > [data-animate]:nth-child(4) {
+  transition-delay: 360ms;
+}
